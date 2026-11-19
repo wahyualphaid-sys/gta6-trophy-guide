@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="kicker">Grand Theft Auto VI · PlayStation 5 · Offline guide &amp; tracker</p>
+  <h1>Leonida Legend</h1>
+  <p class="sub">All 55 trophies, a three-stage Platinum roadmap, the one missable trophy
+  flagged in red, and a checklist that remembers your progress in this browser.</p>
+  <div class="stats" id="stats">
+    <span><strong id="stat-earned">0</strong> of 55 earned</span>
+    <span><strong>~200 h</strong> to Platinum</span>
+    <span><strong>4/10</strong> difficulty</span>
+    <span><strong>1</strong> potentially missable</span>
+    <span><strong>0</strong> online trophies</span>
+  </div>
+  <div class="bar" aria-hidden="true"><div id="bar-fill"></div></div>
+</header>
+
+<main>
+  <section class="panel" id="roadmap">
+    <h2>Platinum roadmap</h2>
+    <p class="source-note">Roadmap shape, difficulty and timing: PowerPyx, GTA 6 Trophy Guide &amp; Roadmap
+    (powerpyx.com). Cross-checked against Output Lag's full trophy list, 19 Nov 2026.</p>
+    <ol class="stages">
+      <li>
+        <h3>Stage 1 — Story, with two habits and one rescue <span>60–80 hours</span></h3>
+        <p>Play the five chapters and enjoy them — there are no mission medals and no difficulty
+        trophies. Three things ride along: <strong>(a)</strong> in Chapter 1, follow Lucia to the balcony
+        at Jason's house when she says she is going to meditate, and accept — that session feeds the
+        game's only potentially missable trophy, Positive Mental Attitude, and it is gone when the
+        chapter ends; <strong>(b)</strong> scan every new vehicle with the WAiNK app and study new animals
+        through the binoculars as you travel, so the 100% checklist is half done before you ever see it;
+        <strong>(c)</strong> keep a manual save at the start of every chapter and one untouched save before
+        the final mission — there is no mission replay and no New Game Plus. Never use cheats on this
+        save: cheats disable trophies and saving.</p>
+      </li>
+      <li>
+        <h3>Stage 2 — The 100% checklist &amp; 70 of 80 Challenges <span>~100 hours</span></h3>
+        <p>After the credits, open Progress &gt; Stats &gt; 100% Completion. The checklist is lenient —
+        roughly 60% of true completion: 200 of 277 vehicles, 100 of 255 animals, 300 stunts (past the
+        trophy's 250), all robberies, shooting ranges and drone races, Bret's 15 Target Decks and
+        15 of 18 meditations. Finishing it earns A Long Road, the Gold that gates the Platinum.</p>
+      </li>
+      <li>
+        <h3>Stage 3 — Strangers &amp; Freaks and cleanup <span>~10 hours</span></h3>
+        <p>Finish 8 counting Strangers &amp; Freaks strands (Kirk, Kyle, Yago, Pilot Pete and friends —
+        the named characters with their own trophies do not count), the six character finales
+        (Andy, Kenton, Billy, Randy, Tyrone, Bret), and whatever one-off trophies are left.
+        Vice Got a Price! pops when the counter reaches 54 of 54.</p>
+      </li>
+    </ol>
+    <div class="missable-box">
+      <h3>⚠ The one missable: Positive Mental Attitude</h3>
+      <p>Meditate at every spot across Leonida (18 spots, 10 locations; a spot done with both
+      Jason and Lucia counts twice). The Chapter 1 balcony meditation at Jason's house disappears
+      at the end of Chapter 1 and it is still unconfirmed whether the trophy strictly needs it —
+      so do it anyway, and keep a Chapter 1 save until the trophy pops. Flagged by PowerPyx,
+      Output Lag and KeenGamer, checked 19 Nov 2026. Five hidden trophies
+      (In The Beginning…, Capital Offense, Bad Luck I Guess, The Truth Is Out There, Ten Pin)
+      had <em>no confirmed trigger</em> at launch — their entries below say so plainly instead of
+      inventing a method.</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Trophy tracker</h2>
+    <div class="controls">
+      <label>Show
+        <select id="kind">
+          <option value="all">All trophies</option>
+          <option value="story">Story</option>
+          <option value="missable">Missable</option>
+          <option value="collectibles">Collectibles</option>
+          <option value="activities">Activities</option>
+          <option value="robbery">Robberies</option>
+          <option value="partner">Partner</option>
+          <option value="completion">Completion</option>
+          <option value="online">Online (none in this list)</option>
+        </select>
+      </label>
+      <label>Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label>Search <input id="search" type="search" placeholder="trophy, place, character…"></label>
+      <label class="check"><input id="spoilers" type="checkbox" checked> Hide spoilers
+        <span class="hint">(story trophy names &amp; descriptions stay hidden until earned)</span></label>
+      <label class="check"><input id="only-left" type="checkbox"> Only unearned</label>
+      <button id="export" type="button">Export progress</button>
+      <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+      <button id="reset" type="button">Reset</button>
+    </div>
+    <p id="progress" class="progress-line">Loading the official list…</p>
+    <div id="cards"></div>
+  </section>
+
+  <footer>
+    <p>Trophy names, descriptions and grades are the official PlayStation text (list reported
+    18 Nov 2026 via Exophase). Every guide here is written for this entry in our own words and
+    names its source on the card. Launch sources: PowerPyx (roadmap &amp; methods),
+    Output Lag (full list, robbery / partner / free-roam methods, unconfirmed five),
+    Radio Times (list cross-check, 19 Nov 2026), KeenGamer (cross-check).
+    Rockstar Games has not published its own trophy table. No Rockstar artwork is used.
+    This app works fully offline and saves progress only in your browser.</p>
+  </footer>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
